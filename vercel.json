@@ -1,0 +1,10 @@
+{
+    "version":2,
+    "builds":[{"src":"app.js","use":"@vercle/node"}],
+    "routes":[
+        {
+            "src":"/(.*)",
+            "dest":"app.js"
+        }
+    ]
+}
