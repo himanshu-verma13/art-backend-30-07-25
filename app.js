@@ -63,6 +63,7 @@ const contactRoutes = require('./routes/contact');
 
 const User = require('./models/user');
 const Product = require('./models/product');
+const TopProduct = require('./models/topProduct');
 const Feedback = require('./models/feedback');
 const CartItem = require('./models/cart');
 const { Order, OrderItem } = require('./models/order');
@@ -84,7 +85,7 @@ app.get('/', (req, res) => {
   res.send('Art Ecommerce Backend is running.');
 });
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 11860;
 
 sequelize.sync({ alter: true }).then(() => {
   console.log('Database synced');
