@@ -85,6 +85,18 @@ app.get('/', (req, res) => {
   res.send('Art Ecommerce Backend is running.');
 });
 
+// api to show server status 
+// API endpoint to check server status
+app.get('/status', (req, res) => {
+  res.json({ message: 'Server is active' });
+});
+
+// Automatically log message every 20 seconds
+setInterval(() => {
+  console.log('Server is active');
+}, 20000);
+
+
 const PORT = process.env.PORT || 11860;
 
 sequelize.sync({ alter: true }).then(() => {
